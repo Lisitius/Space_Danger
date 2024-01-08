@@ -1,0 +1,41 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Space Danger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black">
+    <div
+      class="fixed top-0 left-1/2 transform -translate-x-1/2 text-white text-xl select-none font-medium"
+    >
+      <span>Score:</span> <span id="score">0</span>
+    </div>
+    <div class="fixed inset-0 flex justify-center items-center" id="modalStart">
+      <div class="bg-white max-w-md w-full p-6 text-center">
+        <h1 class="text-4xl font-bold leading-none" id="bigScore">0</h1>
+        <p class="text-sm text-gray-700 mb-4">Points</p>
+        <div>
+          <button
+            id="gameStart"
+            class="bg-red-500 rounded-lg text-white w-full py-3"
+          >
+            Start Game
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center items-center h-full w-full">
+      <div class="text-purple-500 text-3xl text-center font-bold w-3/12">
+        Space Danger
+      </div>
+      <canvas id="gameCanvas" class="w-7/12 h-full"></canvas>
+      <div class="text-center text-white text-lg w-3/12">
+        <p>Move the ship with</p>
+        <p>Z, Q, S, D</p>
+        <p>or</p>
+        <p>directional arrows</p>
+      </div>
+    </div>
+    <script type="module" src="./js/game.js"></script>
+  </body>
+</html>
